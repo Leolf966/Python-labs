@@ -1,8 +1,9 @@
 """classes"""
+from abc import ABC, abstractmethod
 
 
-class Plate:
-    """Plate"""
+class Plate(ABC):  # pylint: disable=too-few-public-methods
+    """Abstract Plate"""
 
     instance = None
 
@@ -13,6 +14,10 @@ class Plate:
         self.color = color
         self.is_clean = is_clean
         self.has_food = has_food
+
+    @abstractmethod
+    def get_max_food_weight(self):
+        """counts the weight of food"""
 
     @classmethod
     def get_instance(cls):
