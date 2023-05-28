@@ -1,1 +1,1 @@
-# Python-lab1
+# Python-lab2
